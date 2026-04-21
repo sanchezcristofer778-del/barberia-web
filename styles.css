@@ -1,30 +1,15 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background: #111;
   color: white;
-}
-
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: black;
-  position: sticky;
-  top: 0;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
+  text-align: center;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033') center/cover;
+  background: url('img/fondo.jpg') center/cover no-repeat;
   position: relative;
 }
 
@@ -37,56 +22,25 @@ nav a {
 
 .hero-content {
   position: relative;
-  text-align: center;
   top: 40%;
 }
 
-.hero h2 {
-  font-size: 50px;
-}
-
-.hero p {
-  margin: 10px 0;
-}
-
-/* BOTÓN */
-button {
-  background: gold;
-  padding: 12px 25px;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background: orange;
-  transform: scale(1.05);
-}
-
-/* SECCIÓN */
-.seccion {
-  text-align: center;
-  padding: 50px 20px;
-}
-
+/* CARDS */
 .contenedor {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* CARDS */
 .card {
   background: #222;
-  margin: 15px;
+  margin: 10px;
   padding: 20px;
-  width: 220px;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
   background: #333;
 }
 
@@ -94,18 +48,19 @@ button:hover {
 .modal {
   display: none;
   position: fixed;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.9);
 }
 
 .modal-contenido {
   background: #222;
-  margin: 5% auto;
+  margin: 15% auto;
   padding: 20px;
-  width: 350px;
+  width: 90%;
+  max-width: 350px;
   border-radius: 10px;
-  text-align: center;
 }
 
 .modal img {
@@ -115,17 +70,13 @@ button:hover {
 
 .cerrar {
   float: right;
+  font-size: 25px;
   cursor: pointer;
 }
 
-/* CONTACTO */
-.contacto {
-  text-align: center;
-  padding: 50px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-content {
+    top: 35%;
+  }
 }

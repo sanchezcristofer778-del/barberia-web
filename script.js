@@ -20,5 +20,5 @@ function irWhatsApp() {
 }
 
 function irWhatsAppDirecto() {
-  window.open("https://wa.me/51926881582?text=Hola,%20quiero%20información");
+  window.open("https://wa.me/51926881582");
 }
