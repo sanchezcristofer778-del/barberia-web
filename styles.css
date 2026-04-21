@@ -1,8 +1,71 @@
 body {
-  font-family: Arial;
+  margin: 0;
+  font-family: Arial, sans-serif;
   background: #111;
   color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: black;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033') center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.hero-content {
+  position: relative;
   text-align: center;
+  top: 40%;
+}
+
+.hero h2 {
+  font-size: 50px;
+}
+
+.hero p {
+  margin: 10px 0;
+}
+
+/* BOTÓN */
+button {
+  background: gold;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: orange;
+  transform: scale(1.05);
+}
+
+/* SECCIÓN */
+.seccion {
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .contenedor {
@@ -11,15 +74,19 @@ body {
   justify-content: center;
 }
 
+/* CARDS */
 .card {
   background: #222;
+  margin: 15px;
   padding: 20px;
-  margin: 10px;
-  cursor: pointer;
+  width: 220px;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .card:hover {
+  transform: translateY(-5px);
   background: #333;
 }
 
@@ -27,7 +94,6 @@ body {
 .modal {
   display: none;
   position: fixed;
-  top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.8);
@@ -35,10 +101,11 @@ body {
 
 .modal-contenido {
   background: #222;
-  margin: 10% auto;
+  margin: 5% auto;
   padding: 20px;
-  width: 300px;
+  width: 350px;
   border-radius: 10px;
+  text-align: center;
 }
 
 .modal img {
@@ -49,4 +116,16 @@ body {
 .cerrar {
   float: right;
   cursor: pointer;
+}
+
+/* CONTACTO */
+.contacto {
+  text-align: center;
+  padding: 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
 }

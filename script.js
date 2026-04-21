@@ -18,3 +18,7 @@ function irWhatsApp() {
   let mensaje = "Hola, quiero reservar " + servicioActual;
   window.open("https://wa.me/51926881582?text=" + encodeURIComponent(mensaje));
 }
+
+function irWhatsAppDirecto() {
+  window.open("https://wa.me/51926881582?text=Hola,%20quiero%20información");
+}

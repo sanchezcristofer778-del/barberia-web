@@ -10,34 +10,75 @@
 
 <header>
   <h1>Barbería Premium</h1>
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 </header>
 
-<section class="seccion">
-  <h2>Servicios</h2>
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h2>Tu estilo, nuestra precisión</h2>
+    <p>Cortes modernos, elegancia y experiencia premium</p>
+    <button onclick="irWhatsAppDirecto()">Reservar ahora</button>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="seccion">
+  <h2>Nuestros Servicios</h2>
 
   <div class="contenedor">
 
-    <div class="card" onclick="abrirModal('Corte Clásico','Incluye corte completo','S/ 45 - S/ 70','img/corte-clasico.jpg')">Corte Clásico</div>
+    <div class="card" onclick="abrirModal('Corte Clásico','Estilo tradicional con acabado limpio y elegante. Ideal para un look profesional y ordenado.','S/ 45 - S/ 70','img/corte-clasico.jpg')">
+      <h3>Corte Clásico</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Fade','Degradado profesional','S/ 50 - S/ 85','img/fade.jpg')">Fade</div>
+    <div class="card" onclick="abrirModal('Fade / Degradado','Transiciones suaves con técnica profesional. Uno de los estilos más modernos y solicitados.','S/ 50 - S/ 85','img/fade.jpg')">
+      <h3>Fade / Degradado</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Corte Niño','Servicio rápido','S/ 35 - S/ 50','img/corte-nino.jpg')">Corte Niño</div>
+    <div class="card" onclick="abrirModal('Corte Niño','Corte cómodo y rápido para niños con estilo moderno.','S/ 35 - S/ 50','img/corte-nino.jpg')">
+      <h3>Corte Niño</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Buzz Cut','Corte uniforme','S/ 30 - S/ 45','img/buzz-cut.jpg')">Buzz Cut</div>
+    <div class="card" onclick="abrirModal('Buzz Cut','Corte uniforme, práctico y fácil de mantener.','S/ 30 - S/ 45','img/buzz-cut.jpg')">
+      <h3>Buzz Cut</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Perfilado Barba','Perfilado profesional','S/ 30 - S/ 45','img/perfilado-barba.jpg')">Perfilado Barba</div>
+    <div class="card" onclick="abrirModal('Perfilado Barba','Definición precisa de líneas y forma de barba.','S/ 30 - S/ 45','img/perfilado-barba.jpg')">
+      <h3>Perfilado Barba</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Ritual Barba','Afeitado completo','S/ 50 - S/ 80','img/ritual-barba.jpg')">Ritual Barba</div>
+    <div class="card" onclick="abrirModal('Ritual Barba','Experiencia premium con toalla caliente y aceites.','S/ 50 - S/ 80','img/ritual-barba.jpg')">
+      <h3>Ritual Barba</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Tinturación Barba','Coloración','S/ 40 - S/ 60','img/tinturacion-barba.jpg')">Tinturación</div>
+    <div class="card" onclick="abrirModal('Tinturación Barba','Coloración para mejorar apariencia y densidad.','S/ 40 - S/ 60','img/tinturacion-barba.jpg')">
+      <h3>Tinturación</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Limpieza Facial','Tratamiento facial','S/ 60 - S/ 130','img/limpieza-facial.jpg')">Limpieza Facial</div>
+    <div class="card" onclick="abrirModal('Limpieza Facial','Tratamiento profundo para el cuidado de la piel.','S/ 60 - S/ 130','img/limpieza-facial.jpg')">
+      <h3>Limpieza Facial</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Camuflaje Canas','Color natural','S/ 80 - S/ 150','img/camuflaje-canas.jpg')">Camuflaje</div>
+    <div class="card" onclick="abrirModal('Camuflaje Canas','Coloración natural para ocultar canas.','S/ 80 - S/ 150','img/camuflaje-canas.jpg')">
+      <h3>Camuflaje Canas</h3>
+    </div>
 
-    <div class="card" onclick="abrirModal('Cejas','Perfilado','S/ 15 - S/ 25','img/cejas.jpg')">Cejas</div>
+    <div class="card" onclick="abrirModal('Perfilado Cejas','Diseño limpio que resalta la expresión facial.','S/ 15 - S/ 25','img/cejas.jpg')">
+      <h3>Cejas</h3>
+    </div>
 
   </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contacto">
+  <h2>Reserva tu cita</h2>
+  <button onclick="irWhatsAppDirecto()">Contactar por WhatsApp</button>
 </section>
 
 <!-- MODAL -->
@@ -48,9 +89,13 @@
     <img id="imagen">
     <p id="descripcion"></p>
     <p id="precio"></p>
-    <button onclick="irWhatsApp()">Reservar</button>
+    <button onclick="irWhatsApp()">Reservar servicio</button>
   </div>
 </div>
+
+<footer>
+  <p>© 2026 Barbería Premium</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
