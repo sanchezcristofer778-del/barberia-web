@@ -10,143 +10,47 @@
 
 <header>
   <h1>Barbería Premium</h1>
-  <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#combos">Combos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Estilo, precisión y elegancia</h2>
-    <p>Reserva tu cita y transforma tu imagen</p>
-    <button onclick="irWhatsApp()">Reservar cita</button>
-  </div>
-</section>
-
-<!-- SERVICIOS CABELLO -->
 <section class="seccion">
-  <h2>Servicios de Cabello</h2>
+  <h2>Servicios</h2>
+
   <div class="contenedor">
 
-    <div class="card">
-      <h3>Corte Clásico</h3>
-      <p>Incluye consulta, corte, lavado y peinado.</p>
-      <span>S/ 45 - S/ 70</span>
-    </div>
+    <div class="card" onclick="abrirModal('Corte Clásico','Incluye corte completo','S/ 45 - S/ 70','img/corte-clasico.jpg')">Corte Clásico</div>
 
-    <div class="card">
-      <h3>Fade / Degradado</h3>
-      <p>High, Mid, Low o Skin Fade.</p>
-      <span>S/ 50 - S/ 85</span>
-    </div>
+    <div class="card" onclick="abrirModal('Fade','Degradado profesional','S/ 50 - S/ 85','img/fade.jpg')">Fade</div>
 
-    <div class="card">
-      <h3>Corte de Niño</h3>
-      <p>Servicio ágil para menores.</p>
-      <span>S/ 35 - S/ 50</span>
-    </div>
+    <div class="card" onclick="abrirModal('Corte Niño','Servicio rápido','S/ 35 - S/ 50','img/corte-nino.jpg')">Corte Niño</div>
 
-    <div class="card">
-      <h3>Buzz Cut</h3>
-      <p>Corte uniforme con máquina.</p>
-      <span>S/ 30 - S/ 45</span>
-    </div>
+    <div class="card" onclick="abrirModal('Buzz Cut','Corte uniforme','S/ 30 - S/ 45','img/buzz-cut.jpg')">Buzz Cut</div>
+
+    <div class="card" onclick="abrirModal('Perfilado Barba','Perfilado profesional','S/ 30 - S/ 45','img/perfilado-barba.jpg')">Perfilado Barba</div>
+
+    <div class="card" onclick="abrirModal('Ritual Barba','Afeitado completo','S/ 50 - S/ 80','img/ritual-barba.jpg')">Ritual Barba</div>
+
+    <div class="card" onclick="abrirModal('Tinturación Barba','Coloración','S/ 40 - S/ 60','img/tinturacion-barba.jpg')">Tinturación</div>
+
+    <div class="card" onclick="abrirModal('Limpieza Facial','Tratamiento facial','S/ 60 - S/ 130','img/limpieza-facial.jpg')">Limpieza Facial</div>
+
+    <div class="card" onclick="abrirModal('Camuflaje Canas','Color natural','S/ 80 - S/ 150','img/camuflaje-canas.jpg')">Camuflaje</div>
+
+    <div class="card" onclick="abrirModal('Cejas','Perfilado','S/ 15 - S/ 25','img/cejas.jpg')">Cejas</div>
 
   </div>
 </section>
 
-<!-- BARBA -->
-<section class="seccion oscuro">
-  <h2>Cuidado de Barba</h2>
-  <div class="contenedor">
-
-    <div class="card">
-      <h3>Perfilado de Barba</h3>
-      <p>Marcado y rebaje de volumen.</p>
-      <span>S/ 30 - S/ 45</span>
-    </div>
-
-    <div class="card">
-      <h3>Ritual de Barba</h3>
-      <p>Afeitado tradicional + toalla caliente.</p>
-      <span>S/ 50 - S/ 80</span>
-    </div>
-
-    <div class="card">
-      <h3>Tinturación de Barba</h3>
-      <p>Color para cubrir canas.</p>
-      <span>S/ 40 - S/ 60</span>
-    </div>
-
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <h2 id="titulo"></h2>
+    <img id="imagen">
+    <p id="descripcion"></p>
+    <p id="precio"></p>
+    <button onclick="irWhatsApp()">Reservar</button>
   </div>
-</section>
-
-<!-- ESTETICA -->
-<section class="seccion">
-  <h2>Complementos y Estética</h2>
-  <div class="contenedor">
-
-    <div class="card">
-      <h3>Limpieza Facial</h3>
-      <p>Exfoliación + mascarilla.</p>
-      <span>S/ 60 - S/ 130</span>
-    </div>
-
-    <div class="card">
-      <h3>Camuflaje de Canas</h3>
-      <p>Coloración natural.</p>
-      <span>S/ 80 - S/ 150</span>
-    </div>
-
-    <div class="card">
-      <h3>Perfilado de Cejas</h3>
-      <p>Diseño con navaja o pinza.</p>
-      <span>S/ 15 - S/ 25</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- COMBOS -->
-<section id="combos" class="seccion oscuro">
-  <h2>Combos</h2>
-  <div class="contenedor">
-
-    <div class="card destacado">
-      <h3>Combo Básico</h3>
-      <p>Corte + Barba</p>
-      <span>S/ 85 - S/ 120</span>
-    </div>
-
-    <div class="card destacado">
-      <h3>Combo Full</h3>
-      <p>Corte + Barba + Facial</p>
-      <span>S/ 130 - S/ 180</span>
-    </div>
-
-    <div class="card destacado">
-      <h3>Combo Express</h3>
-      <p>Corte + Cejas</p>
-      <span>S/ 60 - S/ 90</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto" class="contacto">
-  <h2>Reserva tu cita</h2>
-  <p>Haz click y agenda por WhatsApp</p>
-  <button onclick="irWhatsApp()">Reservar ahora</button>
-</section>
-
-<footer>
-  <p>© 2026 Barbería Premium - Lima, Perú</p>
-</footer>
-
-<a href="https://wa.me/51926881582" class="whatsapp" target="_blank">💬</a>
+</div>
 
 <script src="script.js"></script>
 </body>

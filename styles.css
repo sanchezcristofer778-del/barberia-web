@@ -1,127 +1,52 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background: #111;
   color: white;
-}
-
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: black;
-  position: sticky;
-  top: 0;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-/* HERO */
-.hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-              url('https://images.unsplash.com/photo-1621605815971-fbc98d665033');
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
-.hero h2 {
-  font-size: 40px;
-}
-
-button {
-  background: gold;
-  padding: 12px 25px;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button:hover {
-  background: orange;
-  transform: scale(1.05);
-  transition: 0.3s;
-}
-
-/* SECCIONES */
-.seccion {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.oscuro {
-  background: #1a1a1a;
-}
-
-/* CONTENEDOR */
 .contenedor {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* CARDS */
 .card {
   background: #222;
-  border-radius: 10px;
-  margin: 15px;
   padding: 20px;
-  width: 250px;
-  transition: 0.3s;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  background: #333;
 }
 
-.card span {
-  display: block;
-  margin-top: 10px;
-  color: gold;
-  font-weight: bold;
-}
-
-/* DESTACADOS */
-.destacado {
-  border: 2px solid gold;
-}
-
-/* CONTACTO */
-.contacto {
-  text-align: center;
-  padding: 50px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: black;
-}
-
-/* WHATSAPP */
-.whatsapp {
+/* MODAL */
+.modal {
+  display: none;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  padding: 15px;
-  border-radius: 50%;
-  color: white;
-  text-decoration: none;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;
-    align-items: center;
-  }
+.modal-contenido {
+  background: #222;
+  margin: 10% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cerrar {
+  float: right;
+  cursor: pointer;
 }
