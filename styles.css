@@ -23,18 +23,29 @@ nav a {
 
 /* HERO */
 .hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-              url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70');
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url('https://images.unsplash.com/photo-1621605815971-fbc98d665033');
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* BOTONES */
+.hero-content {
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 40px;
+}
+
+.hero p {
+  margin: 10px 0;
+}
+
+/* BOTÓN */
 button {
   background: gold;
   padding: 12px 25px;
@@ -43,30 +54,40 @@ button {
   margin-top: 10px;
 }
 
-/* SERVICIOS */
-.servicios {
+button:hover {
+  background: orange;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* SECCIONES */
+.servicios, .contacto, .testimonios, .galeria {
   padding: 40px;
   text-align: center;
 }
 
+/* CONTENEDOR */
 .contenedor {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+/* CARDS */
 .card {
   border: 1px solid #444;
   margin: 10px;
   padding: 20px;
   width: 200px;
   background: #222;
+  border-radius: 10px;
 }
 
-/* CONTACTO */
-.contacto {
-  text-align: center;
-  padding: 40px;
+/* GALERÍA */
+.galeria img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 /* FOOTER */
