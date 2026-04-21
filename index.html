@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Barbería Elegante</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Barbería Elegante</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <h2>Tu estilo, nuestra pasión</h2>
+  <p>Cortes modernos y clásicos en Lima</p>
+  <button onclick="irWhatsApp()">Reservar por WhatsApp</button>
+</section>
+
+<section id="servicios" class="servicios">
+  <h2>Servicios</h2>
+
+  <div class="contenedor">
+    <div class="card">
+      <h3>Corte de Cabello</h3>
+      <p>S/ 25</p>
+    </div>
+
+    <div class="card">
+      <h3>Afeitado Clásico</h3>
+      <p>S/ 20</p>
+    </div>
+
+    <div class="card">
+      <h3>Barba Premium</h3>
+      <p>S/ 30</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="contacto">
+  <h2>Contáctanos</h2>
+  <p>Haz tu reserva rápida por WhatsApp</p>
+  <button onclick="irWhatsApp()">Enviar mensaje</button>
+</section>
+
+<footer>
+  <p>© 2026 Barbería Elegante - Lima, Perú</p>
+</footer>
+
+<!-- Botón flotante -->
+<a href="https://wa.me/51926881582" class="whatsapp" target="_blank">
+  💬
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
